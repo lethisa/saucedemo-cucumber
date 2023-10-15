@@ -38,7 +38,8 @@ Feature: Saucedemo Product, Checkout and Logout
 
   @Regression @Negative
   Scenario: Success Checkout None
-    When user click checkout button
+    When user click cart icon
+    And user click checkout button
     And user input Firstname
     And user input Lastname
     And user click continue
@@ -46,7 +47,8 @@ Feature: Saucedemo Product, Checkout and Logout
 
   @Regression @Positive
   Scenario: Success Checkout Complete
-    When user click checkout button
+    When user click cart icon
+    And user click checkout button
     And user input Firstname
     And user input Lastname
     And user input postal

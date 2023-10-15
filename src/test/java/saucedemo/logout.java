@@ -87,12 +87,12 @@ public class logout {
 
     @And("user click cart icon")
     public void user_click_cart_icon() {
-        driver.findElement(By.className("shopping_cart_link"));
+        driver.findElement(By.className("shopping_cart_link")).click();
     }
 
     @And("user click continue")
     public void user_click_continue() {
-        driver.findElement(By.className("continue"));
+        driver.findElement(By.id("continue")).click();
     }
 
     @Then("product show at cart list")
@@ -102,12 +102,12 @@ public class logout {
 
     @Then("checkout page displayed")
     public void checkout_page_displayed() {
-        driver.findElement(By.className("finish"));
+        driver.findElement(By.id("finish"));
     }
 
     @Then("cart page displayed")
     public void cart_page_displayed() {
-        driver.findElement(By.className("checkout"));
+        driver.findElement(By.id("checkout"));
     }
 
     @Then("product not show at cart list")
